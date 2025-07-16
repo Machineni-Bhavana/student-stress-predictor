@@ -45,3 +45,9 @@ elif predicted_stress == "Medium":
 else:
     st.success("✅ Low stress. Keep up the good habits!")
 
+try:
+    import joblib
+except ImportError:
+    import os
+    os.system("pip install joblib scikit-learn pandas")
+    import joblib
